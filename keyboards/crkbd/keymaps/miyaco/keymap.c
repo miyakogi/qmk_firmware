@@ -126,7 +126,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch(keycode) {
         case LGUI_T(KC_A):
         case RGUI_T(KC_P):
-            return TAPPING_TERM + 50;
+            return TAPPING_TERM + 20;
         case LALT_T(KC_S):
         case RALT_T(KC_L):
             return TAPPING_TERM + 100;
