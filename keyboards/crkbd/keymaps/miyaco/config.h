@@ -31,8 +31,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DYNAMIC_KEYMAP_LAYER_COUNT 8
 
 //#define QUICK_TAP_TERM 0
-#define TAPPING_TERM 190
-#define PERMISSIVE_HOLD
+#define TAPPING_TERM 220
+//#define PERMISSIVE_HOLD
 
 #ifdef RGBLIGHT_ENABLE
     #define RGBLIGHT_EFFECT_BREATHING
