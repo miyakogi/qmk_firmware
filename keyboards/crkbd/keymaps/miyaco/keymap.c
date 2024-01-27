@@ -121,3 +121,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 
+#ifdef TAPPING_TERM_PER_KEY
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    switch(keycode) {
+        case LGUI_T(KC_A):
+        case RGUI_T(KC_P):
+            return TAPPING_TERM + 50;
+        case LALT_T(KC_S):
+        case RALT_T(KC_L):
+            return TAPPING_TERM + 100;
+        case LCTL_T(KC_D):
+        case RCTL_T(KC_K):
+            return TAPPING_TERM;
+        case LSFT_T(KC_F):
+        case RSFT_T(KC_J):
+            return TAPPING_TERM - 50;
+        default:
+            return TAPPING_TERM;
+    }
+}
+#endif
