@@ -141,3 +141,20 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     }
 }
 #endif
+
+
+// RGB Layer
+// see: https://note.com/yinouet1001/n/na3b132c060f3
+layer_state_t layer_state_set_user(layer_state_t state) {
+    uint8_t layer = biton32(state);
+    switch(layer) {
+        case 7:
+            rgblight_sethsv(HSV_PURPLE);
+            break;
+        default:
+            rgblight_sethsv(HSV_TURQUOISE);
+            break;
+    }
+
+    return state;
+}
