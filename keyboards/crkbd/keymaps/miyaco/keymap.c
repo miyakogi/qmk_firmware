@@ -135,7 +135,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             return TAPPING_TERM;
         case LSFT_T(KC_F):
         case RSFT_T(KC_J):
-            return TAPPING_TERM - 50;
+            return TAPPING_TERM - 30;
         default:
             return TAPPING_TERM;
     }
