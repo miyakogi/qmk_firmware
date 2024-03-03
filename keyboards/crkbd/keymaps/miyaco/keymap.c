@@ -114,8 +114,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+-------------+-------------+-------------+----------------+--------|
       KC_LSFT,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,         KC_M,      KC_COMM,       KC_DOT,         KC_SLSH, KC_BSPC,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+-------------+-------------+-------------+----------------+--------|
-                                           KC_ESC, XXXXXXX,  KC_SPC,     KC_ENT, XXXXXXX,        TG(7)
+                                           KC_ESC,   MO(8),  KC_SPC,     KC_ENT,  KC_ENT,        TG(7)
                                       //`--------------------------'  `-------------------------------'
+
+  ),
+
+    [8] = LAYOUT_split_3x6_3(  // Gaming Number Layer
+  //,-----------------------------------------------------.                    ,-----------------------------------------------------.
+       KC_GRV, KC_LBRC,    KC_7,    KC_8,    KC_9, KC_RBRC,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+      KC_LCTL, KC_MINS,    KC_4,    KC_5,    KC_6,  KC_EQL,                      XXXXXXX, KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI, XXXXXXX,
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+      KC_LSFT,  KC_GRV,    KC_1,    KC_2,    KC_3, KC_BSLS,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_BSPC,
+  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
+                                          _______, _______, _______,     KC_ENT,  KC_ENT,  KC_ESC
+                                      //`--------------------------'  `--------------------------'
 
   )
 };
@@ -149,6 +162,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     uint8_t layer = biton32(state);
     switch(layer) {
         case 7:
+        case 8:
             rgblight_sethsv(HSV_PURPLE);
             break;
         default:
