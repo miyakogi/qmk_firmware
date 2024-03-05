@@ -149,6 +149,9 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 layer_state_t layer_state_set_user(layer_state_t state) {
     uint8_t layer = biton32(state);
     switch(layer) {
+        case 0:
+            rgblight_sethsv(HSV_BLACK);
+            break;
         case 6:
         case 7:
             rgblight_sethsv(HSV_PURPLE);
