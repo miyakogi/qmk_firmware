@@ -23,11 +23,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_split_3x6_3(  // Default (大西配列mod)
   //,--------------------------------------------------------------------------------.                                 ,--------------------------------------------------------------------------------.
-       KC_TAB,         KC_Q,         KC_Y,         KC_U,       KC_COMM,        KC_DOT,                                            KC_F,          KC_W,         KC_R,         KC_L,         KC_P, KC_SLSH,
+       KC_TAB,         KC_Q,         KC_Y,         KC_U,       KC_COMM,        KC_DOT,                                            KC_F,          KC_W,         KC_R,         KC_L,         KC_P, KC_MINS,
   //|--------+-------------+-------------+-------------+--------------+--------------|                                 |--------------+--------------+-------------+-------------+-------------+--------|
-      KC_CAPS, LGUI_T(KC_E), LALT_T(KC_I), LCTL_T(KC_A),  LSFT_T(KC_O),       KC_MINS,                                            KC_K,  RSFT_T(KC_T), RCTL_T(KC_N), RALT_T(KC_S), RGUI_T(KC_H), KC_QUOT,
+      KC_CAPS, LGUI_T(KC_E), LALT_T(KC_I), LCTL_T(KC_A),  LSFT_T(KC_O),       KC_SCLN,                                            KC_K,  RSFT_T(KC_T), RCTL_T(KC_N), RALT_T(KC_S), RGUI_T(KC_H), KC_QUOT,
   //|--------+-------------+-------------+-------------+--------------+--------------|                                 |--------------+--------------+-------------+-------------+-------------+--------|
-      KC_LSFT,         KC_J,         KC_X,         KC_C,          KC_V,       KC_SCLN,                                            KC_G,          KC_D,         KC_M,         KC_Z,         KC_B, KC_BSPC,
+      KC_LSFT,         KC_J,         KC_X,         KC_C,          KC_V,       KC_SLSH,                                            KC_G,          KC_D,         KC_M,         KC_Z,         KC_B, KC_BSPC,
   //|--------+-------------+-------------+-------------+--------------+--------------+--------------|  |---------------+--------------+--------------+-------------+-------------+-------------+--------|
                                                                JP_MHEN, LT(4, KC_SPC), LT(5, KC_EQL),    LT(2, KC_BSLS), LT(1, KC_ENT), LT(3, JP_HENK)
                                                      //`--------------------------------------------'  `----------------------------------------------'
