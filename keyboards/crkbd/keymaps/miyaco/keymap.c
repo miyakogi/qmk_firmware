@@ -17,7 +17,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include QMK_KEYBOARD_H
-#include "keymap_extras/keymap_japanese.h"
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -25,36 +24,36 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,--------------------------------------------------------------------------------.                                 ,--------------------------------------------------------------------------------.
        KC_TAB,         KC_Q,         KC_Y,         KC_U,       KC_COMM,        KC_DOT,                                            KC_F,          KC_W,         KC_R,         KC_L,         KC_P, KC_MINS,
   //|--------+-------------+-------------+-------------+--------------+--------------|                                 |--------------+--------------+-------------+-------------+-------------+--------|
-      KC_CAPS, LGUI_T(KC_E), LALT_T(KC_I), LCTL_T(KC_A),  LSFT_T(KC_O),       KC_SCLN,                                            KC_K,  RSFT_T(KC_T), RCTL_T(KC_N), RALT_T(KC_S), RGUI_T(KC_H), KC_QUOT,
+      KC_CAPS, LGUI_T(KC_E), LALT_T(KC_I), LCTL_T(KC_A),  LSFT_T(KC_O),       KC_MINS,                                            KC_K,  RSFT_T(KC_T), RCTL_T(KC_N), RALT_T(KC_S), RGUI_T(KC_H), KC_QUOT,
   //|--------+-------------+-------------+-------------+--------------+--------------|                                 |--------------+--------------+-------------+-------------+-------------+--------|
       KC_LSFT,         KC_J,         KC_X,         KC_C,          KC_V,       KC_SLSH,                                            KC_G,          KC_D,         KC_M,         KC_Z,         KC_B, KC_BSPC,
   //|--------+-------------+-------------+-------------+--------------+--------------+--------------|  |---------------+--------------+--------------+-------------+-------------+-------------+--------|
-                                                               JP_MHEN, LT(4, KC_SPC), LT(5, KC_EQL),    LT(2, KC_BSLS), LT(1, KC_ENT), LT(3, JP_HENK)
+                                                                KC_ESC, LT(4, KC_SPC), LT(5, KC_TAB),    LT(2, KC_ENT), LT(1, KC_BSPC),  LT(3, KC_DEL)
                                                      //`--------------------------------------------'  `----------------------------------------------'
 
   ),
 
     [1] = LAYOUT_split_3x6_3(  // Num 1 (left hand)
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-       KC_GRV, KC_LBRC,    KC_7,    KC_8,    KC_9, KC_RBRC,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+       KC_TAB, KC_LBRC,    KC_7,    KC_8,    KC_9, KC_RBRC,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LCTL, KC_SCLN,    KC_4,    KC_5,    KC_6,  KC_EQL,                      XXXXXXX, KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LSFT,  KC_GRV,    KC_1,    KC_2,    KC_3, KC_BSLS,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_BSPC,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                           KC_DOT,    KC_0, KC_MINS,     KC_ENT, _______,  KC_ESC
+                                           KC_DOT,    KC_0, KC_QUOT,     KC_ENT, _______,  KC_ESC
                                       //`--------------------------'  `--------------------------'
   ),
 
     [2] = LAYOUT_split_3x6_3(  // Symbols (with shift)
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      KC_TILD, KC_LCBR, KC_AMPR, KC_ASTR, KC_LPRN, KC_RCBR,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+       KC_TAB, KC_LCBR, KC_AMPR, KC_ASTR, KC_LPRN, KC_RCBR,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LCTL, KC_COLN,  KC_DLR, KC_PERC, KC_CIRC, KC_PLUS,                      XXXXXXX, KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LSFT, KC_TILD, KC_EXLM,   KC_AT, KC_HASH, KC_PIPE,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LPRN, KC_RPRN, KC_UNDS,    _______, _______,  KC_ESC
+                                          KC_LPRN, KC_RPRN, KC_DQUO,    _______, _______,  KC_ESC
                                       //`--------------------------'  `--------------------------'
   ),
 
@@ -66,7 +65,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       RGB_SAI,  KC_F10,   KC_F1,   KC_F2,   KC_F3, KC_PAUS,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                            TG(6), _______,  KC_SPC,     KC_ENT, _______, _______
+                                            TG(6), _______,  KC_APP,     KC_ENT, _______, _______
                                       //`--------------------------'  `--------------------------'
   ),
 
@@ -109,7 +108,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [7] = LAYOUT_split_3x6_3(  // Gaming Number Layer
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-       KC_GRV, KC_LBRC,    KC_7,    KC_8,    KC_9, KC_RBRC,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+       KC_TAB, KC_LBRC,    KC_7,    KC_8,    KC_9, KC_RBRC,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LCTL, KC_MINS,    KC_4,    KC_5,    KC_6,  KC_EQL,                      XXXXXXX, KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
