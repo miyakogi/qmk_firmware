@@ -129,7 +129,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             return TAPPING_TERM + 20;
         case LALT_T(KC_S):
         case RALT_T(KC_L):
-            return TAPPING_TERM + 100;
+            return TAPPING_TERM + 50;
         case LCTL_T(KC_D):
         case RCTL_T(KC_K):
             return TAPPING_TERM;
