@@ -126,17 +126,17 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch(keycode) {
         case LGUI_T(KC_E):
         case RGUI_T(KC_H):
-            return TAPPING_TERM + 20;
+            return TAPPING_TERM + 100;
         case LALT_T(KC_I):
         case RALT_T(KC_S):
-            return TAPPING_TERM + 50;
+            return TAPPING_TERM + 120;
         case LCTL_T(KC_A):
         case RCTL_T(KC_N):
-            return TAPPING_TERM;
+            return TAPPING_TERM + 70;
         case LSFT_T(KC_O):
         case RSFT_T(KC_T):
-            return TAPPING_TERM - 30;
-        default:
+            return TAPPING_TERM + 20;
+        default:  // thumb keys
             return TAPPING_TERM;
     }
 }
