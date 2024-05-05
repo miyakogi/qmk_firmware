@@ -127,10 +127,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 const uint16_t PROGMEM henkan_combo[] = { RCTL_T(KC_N), RALT_T(KC_S), COMBO_END };
 const uint16_t PROGMEM muhenkan_combo[] = { LCTL_T(KC_A), LALT_T(KC_I), COMBO_END };
+const uint16_t PROGMEM esc_combo[] = { RSFT_T(KC_T), RCTL_T(KC_N), COMBO_END };
 
 combo_t key_combos[] = {
     COMBO(henkan_combo, JP_HENK),
     COMBO(muhenkan_combo, JP_MHEN),
+    COMBO(esc_combo, KC_ESC),
 };
 
 
