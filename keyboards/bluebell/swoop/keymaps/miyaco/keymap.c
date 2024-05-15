@@ -147,6 +147,10 @@ combo_t key_combos[] = {
     [COLON_COMBO] = COMBO(colon_combo, KC_COLN),
 };
 
+bool get_combo_must_tap(uint16_t index, combo_t *combo) {
+    return true;
+}
+
 
 #ifdef TAPPING_TERM_PER_KEY
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
