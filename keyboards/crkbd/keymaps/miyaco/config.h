@@ -35,6 +35,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define PERMISSIVE_HOLD
 #define TAPPING_TERM_PER_KEY
 
+#define COMBO_TERM 80
+#define COMBO_MUST_TAP_PER_COMBO
+
 #ifdef RGBLIGHT_ENABLE
     #define RGBLIGHT_LIMIT_VAL 120
     #define RGBLIGHT_HUE_STEP 10

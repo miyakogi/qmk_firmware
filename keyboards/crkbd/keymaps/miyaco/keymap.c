@@ -16,6 +16,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+#include <stdint.h>
 #include QMK_KEYBOARD_H
 #include "keymap_japanese.h"
 
@@ -121,15 +122,31 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   )
 };
 
+enum combos {
+    HENKAN_COMBO,
+    MUHENKAN_COMBO,
+    ESC_COMBO,
+    SEMICOLON_COMBO,
+    COLON_COMBO,
+};
+
 const uint16_t PROGMEM henkan_combo[] = { RCTL_T(KC_N), RALT_T(KC_S), COMBO_END };
 const uint16_t PROGMEM muhenkan_combo[] = { LCTL_T(KC_A), LALT_T(KC_I), COMBO_END };
 const uint16_t PROGMEM esc_combo[] = { RSFT_T(KC_T), RCTL_T(KC_N), COMBO_END };
+const uint16_t PROGMEM semicolon_combo[] = { LSFT_T(KC_O), LCTL_T(KC_A), COMBO_END };
+const uint16_t PROGMEM colon_combo[] = { LALT_T(KC_I), LGUI_T(KC_E), COMBO_END };
 
 combo_t key_combos[] = {
-    COMBO(henkan_combo, JP_HENK),
-    COMBO(muhenkan_combo, JP_MHEN),
-    COMBO(esc_combo, KC_ESC),
+    [HENKAN_COMBO] = COMBO(henkan_combo, JP_HENK),
+    [MUHENKAN_COMBO] = COMBO(muhenkan_combo, JP_MHEN),
+    [ESC_COMBO] = COMBO(esc_combo, KC_ESC),
+    [SEMICOLON_COMBO] = COMBO(semicolon_combo, KC_SCLN),
+    [COLON_COMBO] = COMBO(colon_combo, KC_COLN),
 };
+
+bool get_combo_must_tap(uint16_t index, combo_t *combo) {
+    return true;
+}
 
 
 #ifdef TAPPING_TERM_PER_KEY
