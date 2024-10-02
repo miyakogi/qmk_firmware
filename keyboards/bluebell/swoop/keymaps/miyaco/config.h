@@ -7,5 +7,5 @@
 #define TAPPING_TERM 120
 #define TAPPING_TERM_PER_KEY
 
-#define COMBO_TERM 65
+#define COMBO_TERM 80
 #define COMBO_MUST_TAP_PER_COMBO
