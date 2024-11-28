@@ -114,7 +114,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
  [_GAME_NUM] = LAYOUT_split_3x5_3(  // Gaming Number Layer
   //,--------------------------------------------.                    ,--------------------------------------------.
-       KC_TAB,    KC_7,    KC_8,    KC_9,    KC_T,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+       KC_TAB,    KC_7,    KC_8,    KC_9,    KC_T,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_PSCR,
   //|--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------|
       KC_LCTL,    KC_4,    KC_5,    KC_6,    KC_G,                      XXXXXXX, KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI,
   //|--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------|
