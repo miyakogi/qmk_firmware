@@ -158,14 +158,14 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     switch(layer) {
         case _BASE:
             // rgblight_sethsv(HSV_OFF);
-            rgblight_sethsv(HSV_WHITE);
+            rgblight_sethsv(HSV_TURQUOISE);
             break;
         case _GAME:
         case _GAME_NUM:
             rgblight_sethsv(HSV_PURPLE);
             break;
         default:
-            rgblight_sethsv(HSV_TURQUOISE);
+            rgblight_sethsv(HSV_WHITE);
             break;
     }
 
